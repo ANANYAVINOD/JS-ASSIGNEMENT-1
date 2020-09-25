@@ -1,0 +1,23 @@
+{
+    "lists": [{
+        "listId": 1,
+        "name": "Home",
+         "listUrl": "C:/JS-Assignment-1/html/home.html"
+    }, {
+        "listId": 2,
+        "name": "About",
+        "listUrl": "C:/JS-Assignment-1/html/about.html"
+    }, {
+        "listId": 3,
+        "name": "Services",
+        "listUrl": "C:/JS-Assignment-1/html/services.html" 
+    }, {
+        "listId": 4,
+        "name": "Contact",
+        "listUrl": "C:/JS-Assignment-1/html/contact.html"
+    }],
+    "status": {
+        "mesaage": "",
+        "type": "SUCCESS"
+    }   
+}
