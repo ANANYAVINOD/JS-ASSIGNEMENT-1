@@ -118,3 +118,36 @@ function validation() {
         alert("The form was submitted");
     }
 }    
+function generateDynamicTable() {
+    getJson('http://192.168.43.124:8000/table-header.json', function(response) {
+        if (response) {
+            const head = response.headings;
+            if (head && head.length) {
+                const parent = document.querySelector('#tableHead'),
+                noOfheaders = headings.length;
+                if(noOfheaders>0) {
+                  var col = []; 
+		          for (var i = 0; i < noOfheaders; i++) {
+			        for (var key in headings[i]) {
+				      if (col.indexOf(key) === -1) {
+                        col.push(key);
+                       }
+                    }
+                  }
+                }
+            var tHead = document.createElement("thead"); 
+            var hRow = document.createElement("tr");
+	        for (var i = 0; i < col.length; i++) {
+              var th = document.createElement("th");
+              th.innerHTML = col[i];
+              hRow.appendChild(th);
+            }
+            tHead.appendChild(hRow);
+            table.appendChild(tHead);	
+            var divContainer = document.getElementById("headings");
+	        divContainer.innerHTML = "";
+	        divContainer.appendChild(table);
+            }
+        } 
+    });
+}	
