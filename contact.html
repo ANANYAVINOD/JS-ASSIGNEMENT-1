@@ -88,7 +88,19 @@
         </div>
         <!--  Right sec end-->
         </div>
+       
     </div>
+    <form class="form" action="#" onsubmit="return validation()"> 
+        <input type="text" id="name" name="name" placeholder="Name"><br>
+        <span class="error" id="name-error"></span><br>
+        <input type="text" id="subject" name="subject" placeholder="Subject" class="subject"><br>
+        <span class="error" id="subject-error"></span><br>
+        <input type="tel" id="phone" name="phone" placeholder="Phone No. xxxx-xxx-xxx"><br>
+        <span class="error" id="phone-error"></span><br>
+        <input type="email" id="mail" name="mail" placeholder="E-mail"><br>
+        <span class="error" id="email-error"></span><br>        
+        <input type="submit" value="Send message" onsubmit="return loadSubmit()">
+    </form>    
     <footer>
         <div class="container">
             <div class="footer-item">

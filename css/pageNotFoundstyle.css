@@ -7,4 +7,19 @@ body{
 .container {
     max-width: 1084px;
     margin: 0 auto;
+    background-color:#95E1F9 ;
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bolder;
+    padding-top: 30px;
+}
+.container p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+
 }

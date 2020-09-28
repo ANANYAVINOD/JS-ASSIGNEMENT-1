@@ -15,7 +15,7 @@ function setCurrentClickedMenu(menuObj) {
     }
 }
 function loadMenu() {
-    getJson('.apis/menu.json', function(response) {
+    getJson('http://127.0.0.1:8000/menu.json', function(response) {
         if (response) {
             const menus = response.data;
             if (menus && menus.length) {
@@ -34,24 +34,47 @@ function loadMenu() {
         }
     });
 }
-function getJson(url, callbackFunction) {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', function(event) {
-        if (xhr.status !== 200) {
-            alert('Oops! Something went wrong.');
-            callbackFunction(false);
-        } else {
-            callbackFunction(JSON.parse(xhr.response));
+function loadDynamicBlogPosts() {
+    getJson('http://192.168.43.124:8000/blogs.json', function(response) {
+        if (response) {
+            const blogPosts = response.posts;
+            if ( blogPosts && blogPosts.length) {
+                const parent = document.querySelector('#blogPostsSection'),
+                blogLength = blogPosts.length,
+                ulElm = parent.appendChild(document.createElement('ul'));
+
+                for (let i=0; i<blogLength; i++) {
+                    const aElement = document.createElement('a');
+                    ulElm.setAttribute('id', 'blogPosts');
+                    const postAnchor = createAEl(null, blogPosts[i].blogUrl);
+                    const postImg = postAnchor.appendChild(document.createElement('img'));
+                    postImg.setAttribute('src', blogPosts[i].image);
+                    ulElm.appendChild(document.createElement('li').appendChild(postAnchor));
+                }
+                document.getElementById('blogPostsSection').appendChild(ulElm);
+            }
         }
     });
+}    
+    
+function getJson(url, callbackFunction)    {
+            const xhr = new XMLHttpRequest();
+            xhr.addEventListener('load', function (event) {
+                if (xhr.status !== 200) {
+                    alert('Oops! Something went wrong.');
+                    callbackFunction(false);
+                } else {
+                    callbackFunction(JSON.parse(xhr.response));
+                }
+            });
 
-    xhr.addEventListener('error', function(event) {
-        alert('Oops! Something went wrong.');
-    });
+            xhr.addEventListener('error', function (event) {
+                alert('Oops! Something went wrong.');
+            });
 
-    xhr.open('GET', url, true);
-    xhr.send();
-}
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
 function readMore() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
@@ -65,4 +88,33 @@ function readMore() {
       btnText.innerHTML = "Read less"; 
       moreText.style.display = "inline";
     }
-  }
+}
+function validation() {
+    var name = document.getElementById('name').value;
+    var sub = document.getElementById('subject').value;
+    var num = document.getElementById('phone').value;
+    var mailid = document.getElementById('mail').value;
+
+    if(name == "") {
+        document.getElementById('name-error').innerHTML = "*Please fill the name field";
+        return false;
+    }
+    if((name.length <= 8) || (name.length > 25)) {
+        document.getElementById('name-error').innerHTML = "*Length must be between 8 and 25 characters";
+        return false;
+    }
+    if((subject.length<=25)) {
+        document.getElementById('subject-error').innerHTML = "*Upto 25 characters";
+    }
+    if(num == "") {
+        document.getElementById('phone-error').innerHTML = "*Please fill the Phone number";
+        return false;
+    }
+    if(mailid == "") {
+        document.getElementById('email-error').innerHTML = "*Please fill the email id";
+        return false;
+    }
+    function loadSubmit() {
+        alert("The form was submitted");
+    }
+}    
