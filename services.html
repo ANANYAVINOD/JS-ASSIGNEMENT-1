@@ -20,8 +20,9 @@
     <div class="container">
         <div class="content">
         <!-- Left section Start -->
-        <div id="menuContainer" class="left-sec">
-            
+        <div class="left-sec" id="nav-menu">
+            <nav id="nav">
+            </nav>
         </div>
         <!-- Left section end -->
 
@@ -29,25 +30,30 @@
         <div class="middle-sec">
             <div class="left-content">
                 <h2>Services</h2>
-                <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
-                    survived not only five centuries, but also the leap  into electronic typesetting,remaining
-                    1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software
-                    like Aldus Pagemker including versions of lorem lpsum.</p>
-                <p>why do use it?</p>
+                    <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <span id="dots">...</span><span id="more">
+                        It has survived not only five centuries, but also the leap  into electronic typesetting,remaining
+                        1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with
+                         desktop publishing software
+                        like Aldus Pagemker including versions of lorem lpsum.</p>
+                    <p>why do use it?</span></p>
+                    <button onclick="loadMore()" id="myBtn">Read more</button>
             </div>
             <div class="right-content">
                 <img src="images/main-image.jpg" alt="Rmedia image" class="content-img">    
             </div>
             <div class="table-data"> 
                 <table class="row" cellpadding="2px" cellspacing="2px">
-                    <tr class="table-head">
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                    </tr>
+                    <thead>
+                        <tr id="table-heading">
+                            <!-- <th>Lorem</th>
+                            <th>Lorem</th>
+                            <th>Lorem</th>
+                            <th>Lorem</th> -->
+                        </tr>
+                    </thead>
                     <tr>
                         <td>Lorem</td>
                         <td>Lorem</td>
@@ -79,12 +85,8 @@
 
         <!-- Right sec start -->
         <div class="right-sec">
-            <h3>Latest Posts</h3>
-            <ul>
-                <li><a href="#" ><img src="images/post-image.jpg" alt="" /></a></li>
-                <li><a href="#" ><img src="images/post-image.jpg" alt="" /></a></li>
-                <li><a href="#" ><img src="images/post-image.jpg" alt="" /></a></li>
-            </ul>
+          <h3>Latest Posts</h3>
+          <ul id="posts">
         </div>
         <!--  Right sec end-->
         </div>
@@ -105,8 +107,8 @@
             </div>
         </div>
     </footer>
-
-    <script src="scripts/common.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/home.js"></script>
 </body>
 </html>

@@ -20,8 +20,9 @@
     <div class="container">
         <div class="content">
         <!-- Left section Start -->
-        <div id="menuContainer" class="left-sec">
-            
+        <div class="left-sec" id="nav-menu">
+            <nav id="nav">
+            </nav>
         </div>
         <!-- Left section end -->
 
@@ -29,78 +30,34 @@
         <div class="middle-sec">
             <div class="left-content">
                 <h2>Contact</h2>
-                <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
-                    survived not only five centuries, but also the leap  into electronic typesetting,remaining
-                    1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software
-                    like Aldus Pagemker including versions of lorem lpsum.</p>
-                <p>why do use it?</p>
             </div>
-            <div class="right-content">
-                <img src="images/main-image.jpg" alt="Rmedia image" class="content-img">    
-            </div>
-            <div class="table-data"> 
-                <table class="row" cellpadding="2px" cellspacing="2px">
-                    <tr class="table-head">
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                </table>
+            <div class="form-data"> 
+                <form class="form" action="#" onsubmit="return validation()"> 
+                    <input type="text" id="name" name="name" placeholder="Name"><br>
+                    <span class="error" id="name-error"></span><br>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" class="subject" maxlength="25"><br>
+                    <span class="error" id="subject-error"></span><br>
+                    <input type="text" name="code" disabled value="+91" id="code">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone No. xxxx-xxx-xxx"><br>
+                    <span class="error" id="phone-error"></span><br>
+                    <input type="email" id="mail" name="mail" placeholder="E-mail"><br>
+                    <span class="error" id="email-error"></span><br>  
+                    <textarea id="description" cols="34" rows="5" onkeyup="count()" maxlength="255"  placeholder="Description"></textarea><br>
+                    <span id="charCount">255</span> characters remaining.<br>
+                    <input type="submit" value="Send message" onsubmit="return loadSubmit()">
+                </form> 
             </div>
         </div>
         <!-- Middle section end -->
 
         <!-- Right sec start -->
         <div class="right-sec">
-            <h3>Latest Posts</h3>
-            <ul>
-                <li><a href="#" ><img src="images/post-image.jpg" alt="" /></a></li>
-                <li><a href="#" ><img src="images/post-image.jpg" alt="" /></a></li>
-                <li><a href="#" ><img src="images/post-image.jpg" alt="" /></a></li>
-            </ul>
+          <h3>Latest Posts</h3>
+          <ul id="posts">
         </div>
         <!--  Right sec end-->
         </div>
-       
     </div>
-    <form class="form" action="#" onsubmit="return validation()"> 
-        <input type="text" id="name" name="name" placeholder="Name"><br>
-        <span class="error" id="name-error"></span><br>
-        <input type="text" id="subject" name="subject" placeholder="Subject" class="subject"><br>
-        <span class="error" id="subject-error"></span><br>
-        <input type="tel" id="phone" name="phone" placeholder="Phone No. xxxx-xxx-xxx"><br>
-        <span class="error" id="phone-error"></span><br>
-        <input type="email" id="mail" name="mail" placeholder="E-mail"><br>
-        <span class="error" id="email-error"></span><br>        
-        <input type="submit" value="Send message" onsubmit="return loadSubmit()">
-    </form>    
     <footer>
         <div class="container">
             <div class="footer-item">
@@ -117,8 +74,8 @@
             </div>
         </div>
     </footer>
-
-    <script src="scripts/common.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/contact.js"></script>
 </body>
 </html>
