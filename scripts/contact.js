@@ -21,9 +21,12 @@ function validation() {
     }
 }
 function loadSubmit() {
+    var name = document.getElementById('name').value;
+    var num = document.getElementById('phone').value;
+    var mailid = document.getElementById('mail').value;
     let reqObj;
-    if(validation()) {
-        reqObj = validation;
+    if(name && num && mailid) {
+        reqObj = {name, num, mailid};
         console.log(reqObj);
         reqObj = JSON.stringify(reqObj);
         console.log(reqObj);
