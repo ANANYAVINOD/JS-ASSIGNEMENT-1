@@ -2,22 +2,22 @@
     {
         "label": "Home",
         "path": "home.html",
-        "not_found": false
+        "notFound": false
     },
     {
         "label": "About",
         "path": "about.html",
-        "not_found": true
+        "notFound": true
     },
     {
         "label": "Services",
         "path": "services.html",
-        "not_found": false
+        "notFound": false
     },
     {
         "label": "Contact",
         "path": "contact.html",
-        "not_found": false
+        "notFound": false
     }
 ]
 
