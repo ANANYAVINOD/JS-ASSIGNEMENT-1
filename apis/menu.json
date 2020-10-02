@@ -1,0 +1,23 @@
+[
+    {
+        "label": "Home",
+        "path": "home.html",
+        "notFound": false
+    },
+    {
+        "label": "About",
+        "path": "about.html",
+        "notFound": true
+    },
+    {
+        "label": "Services",
+        "path": "services.html",
+        "notFound": false
+    },
+    {
+        "label": "Contact",
+        "path": "contact.html",
+        "notFound": false
+    }
+]
+

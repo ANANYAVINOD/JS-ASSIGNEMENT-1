@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RMedia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-div">
+        <div class="container flex-box">
+            <h1 class="logo"><a href="/"><img src="images/logo.jpg" alt="RMedia"></a></h1>
+            <div class="search-wrap">
+                <input type="search" name="search" id="search" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div class="container flex-box" id="main-content">
+            <div id="menu-sec">
+                <button id="menu-btn">MENU</button>
+                <nav id="nav">
+                </nav>
+            </div>
+            <div class="flex-box" id="content-sec">
+                <div class="flex-box" id="top-sec">
+                    <div id="text-wrap">
+                    <h2>Contact</h2>
+                    </div> 
+                </div>
+                <div id="bottom-sec">
+                    <div class="contact-form">
+                        <div class="label-div">
+                            <label for="userName">Name<span class="required-field">*</span></label>
+                        </div>
+                        <div class="form-div" id="name-container">
+                            <input type="text" name="userName" placeholder="Name" class="form-field" id="name" required>
+                            <p id="name-error"></p>
+                        </div>
+                        
+                        <div class="label-div">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-div" id="subject-container">
+                            <input type="text" name="subject" placeholder="Subject" class="form-field" id="subject" maxlength="25">
+                        </div>
+                        
+                        <div class="label-div">
+                            <label for="phoneNumber">Phone Number<span class="required-field">*</span></label>
+                        </div>
+                        <div class="form-div" id="phone-container">
+                            <div id="number">
+                                <input type="text" name="code" disabled value="+91" class="form-field" id="code">
+                                <input type="tel" name="phoneNumber" placeholder="XXXXXXXXXX" class="form-field" id="num" required>
+                            </div>
+                            <p id="num-error"></p>
+                        </div>
+                    
+                        <div class="label-div">
+                            <label for="emailId">Email ID<span class="required-field">*</span></label>
+                        </div>
+                        <div class="form-div"  id="email-container">
+                            <input type="email" name="email" placeholder="Email ID" class="form-field" required id="email">
+                            <p id="email-error"></p>
+                        </div>
+                
+                        
+                        <div class="label-div">
+                            <label for="message">Message<span class="required-field">*</span></label>
+                        </div>
+                        <div class="form-div" id="message-container">
+                            <textarea name="message" id="message" placeholder="Description" class="form-field" cols="35" rows="4" required maxlength="255" onkeyup="count()"></textarea>      
+                            <p><span id="charCount">255 </span>characters remaining.</p>
+                        </div>
+                       <button id="form-submit" onclick="validateSend()">Send Message</button> 
+                    </div>
+                </div>
+            </div>
+            <div id="posts-sec">
+                    <h3>Latest Posts</h3>
+                    <ul id="posts">
+            </div>        
+        </div>
+        <footer>
+            <div class="container">
+                <ul class="flex-box">
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                </ul>
+            </div>
+        </footer>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+</html>
