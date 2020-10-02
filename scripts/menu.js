@@ -1,3 +1,34 @@
+let get = function(url, callback) {
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onload = function() {
+        if (this.status === 200) {
+            callback(JSON.parse(this.response));
+        } else {
+            alert('Oops! Something went wrong.');
+        }
+    }
+
+    xhr.open("GET", url);
+    xhr.send();
+}
+
+let post = function(url, payloadObj, callback) {
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onload = function() {
+        if (this.status === 200) {
+            callback(JSON.parse(this.response));
+        } else {
+            alert('Oops! Something went wrong.');
+        }
+    }
+
+    xhr.open("POST", url);
+    xhr.send(payloadObj);
+}
 
 let menuData = new XMLHttpRequest();
 menuData.open("GET", "http://127.0.0.1:8000/menu.json");
